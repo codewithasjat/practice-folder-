@@ -1,0 +1,1 @@
+const firstLink=document.querySelector("body > img:nth-child(4)")
