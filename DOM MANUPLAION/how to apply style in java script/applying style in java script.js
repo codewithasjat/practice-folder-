@@ -1,7 +1,9 @@
-const h1 = document.querySelector('h1').style.backgroundColor=('red');
-console.log(h1);
+const h1 = document.querySelector("h1")
+console.log(h1.classList);
+
 
 const anchor = document.querySelectorAll('a')
+console.log(anchor)
 
 anchor.forEach((anchor)=>{
 
@@ -10,7 +12,7 @@ anchor.forEach((anchor)=>{
 
 
 for (const an of anchor){
-    an.style.color='green'
+    an.style.color='black'
     an.style.textDecoration='none'
     an.style.fontFamily='italic'
     an.style.fontSize='18px'
@@ -20,9 +22,9 @@ for (const an of anchor){
     
     
     `
-console.log(anchor.classlist) 
 
 }
+
 
 const p = document.querySelector('p')
 p.setAttribute('class','newStyle')

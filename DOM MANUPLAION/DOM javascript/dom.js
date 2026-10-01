@@ -19,3 +19,13 @@ allImages.forEach((element,i)=>{
     
 
 })
+
+let h1 = document.querySelector("h1")
+console.log(h1)
+
+let attribute =h1.getAttribute("class")
+console.log(attribute)
+h1.setAttribute("id","misba")
+
+
+

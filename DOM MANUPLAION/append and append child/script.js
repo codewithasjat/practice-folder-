@@ -1,20 +1,10 @@
 const container = document.querySelector(".container")
-const card = document.querySelector(".card")
-const h1 = document.querySelector("h1")
-container.appendChild(h1.cloneNode(true))
-
-
-for (let i=0; i<=100; i++){
-    const newCard = card.cloneNode(true)
-    card.innerHTML++
-    container.appendChild(newCard)
-}
-
-
-
-
-
-
-
-
-
+const card= document.querySelector(".child")
+let count =1
+container.addEventListener("click",()=>{
+    count++
+ const newCard = card.cloneNode(true)
+   card.setAttribute("class", "child");
+   container.appendChild(newCard)
+   newCard.textContent=count
+})

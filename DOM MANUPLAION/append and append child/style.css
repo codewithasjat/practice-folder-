@@ -1,17 +1,21 @@
-.container{
-    color: green;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2px;
-}
-
-.card{
-    width: 70px;
-    height: 80px;
+.child{
+    height: 100px;
+    width:150px;
     background-color: pink;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 4px;
-    font-size: 36px;
+    
+    
+
+}
+
+.container{
+    display: flex;
+    gap : 20px;
+    flex-wrap: wrap;
+
 }
