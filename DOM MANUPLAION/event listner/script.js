@@ -1,31 +1,10 @@
-
- const container= document.querySelector('.container')
-function sayHi(){
-  console.log('ASJAT LOVES MISBA SO MUCH');
-}
-
-container.addEventListener('click', sayHi)
-container.addEventListener('click',function(){
-    console.log('asjat loves misba');
+const card = document.querySelector(".card")
+const container = document.querySelector(".container")
+let count =1
+container.addEventListener("click",()=>{
+  const newCard = card.cloneNode(true)
+  console.log("asjat is hard working");
+   newCard.classList.add("card")
+   newCard.innerText = count++
+   container.append(newCard) 
 })
-
-const newCard=document.querySelector('.card')
-
-
- let count=1
-
-    newCard.addEventListener('click',function(){
-        
-  const newC= document.createElement('div')
-  newC.classList.add('card')
-  newC.innerHTML= count
-  count++
-  console.log('asjat loves misba so much');
-
-
-  container.append(newC)
-    })
-
-
-
-
