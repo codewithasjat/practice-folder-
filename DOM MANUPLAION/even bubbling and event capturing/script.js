@@ -1,6 +1,7 @@
 const green= document.querySelector(".green")
 const pink= document.querySelector(".pink")
 const blue= document.querySelector(".blue")
+const p = document.querySelector("p")
 
 green.addEventListener("click",(e)=>{
     console.log("green");
@@ -9,8 +10,9 @@ green.addEventListener("click",(e)=>{
 
 pink.addEventListener("click",(e)=>{
     console.log("pink");
-    
-},{capture:true})
+
+    p.innerText="event capture"
+},{capture:"true"})
 
 blue.addEventListener("click",()=>{
     console.log("blue");

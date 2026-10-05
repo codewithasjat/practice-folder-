@@ -5,14 +5,17 @@ const button = document.querySelector(".button")
 button.addEventListener("click",()=>{
     const xhr = new XMLHttpRequest()
     xhr.responseType = "json"
-
     xhr.addEventListener( "load",()=>{
        
         image.src = xhr.response.message
-
+     console.log(image.src)
+         
     })
 
    xhr.open("GET", "https://dog.ceo/api/breeds/image/random");
+   
     xhr.send ()
+   console.log(image.src)
+
 })
 

@@ -3,18 +3,21 @@ h1{
 }
 
 .container{
-    color: green;
+    color: red;
     display: flex;
     flex-wrap: wrap;
-    gap:8px
+    gap : 5px;
+
 }
-.card {
-    width: 100px;
+
+.card{
     height: 100px;
-    background-color: hotpink;
+    width: 80px;
+    background-color: crimson;
+    border-radius: 5px;
+    color: black;
+    font-size: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 4px;
-    font-size: 36px;
 }

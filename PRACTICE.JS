@@ -8,9 +8,15 @@
 // })
 // console.log(result)
 
-let arr =[10,20,30,40]
+let students = [
+    { name: "A", marks: 80 },
+    { name: "B", marks: 65 },
+    { name: "C", marks: 90 },
+    { name: "D", marks: 75 }
+];
 
-let result = arr.reduce((acc,curr)=>{
-   return acc + curr
+let result = students.reduce((acc,curr)=>{
+  if(acc) 
+
 },0)
-console.log(result);
+console.log(result)

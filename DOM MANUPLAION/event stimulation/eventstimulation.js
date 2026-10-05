@@ -3,20 +3,21 @@ const card = document.querySelector(".card")
 const input = document.querySelector("input")
 const form = document.querySelector("form")
     let count=1
+    const button = document.querySelector("button")
 
-conatiner.addEventListener("click",()=>{
-    let div = document.createElement('div')
-    div.classList.add("card")
-    div.innerHTML=count++
-    conatiner.append(div)
+// conatiner.addEventListener("click",()=>{
+//     let div = document.createElement('div')
+//     div.classList.add("card")
+//     div.innerHTML=count++
+//     conatiner.append(div)
    
 
-})
+// })
 
+// //  for (let i=1;i<=100;i++){
+// //         conatiner.click()
+// //     }
 
-//  for (let i=1;i<=100;i++){
-//         conatiner.click()
-//     }
 
 // let intervelId = setInterval(()=>{
 //         conatiner.click()
@@ -25,16 +26,22 @@ conatiner.addEventListener("click",()=>{
 
 //     }
 // },50)
-setTimeout(()=>{
-input.focus()
-
-},1000)
-setTimeout(()=>{
-input.blur()
-
-},3000)
-
 // setTimeout(()=>{
-// form.submit()
+// input.focus()
 
-// },5000)
+// },1000)
+// setTimeout(()=>{
+// input.blur()
+
+// },3000)
+
+// // setTimeout(()=>{
+// // form.submit()
+
+// // },5000)
+
+
+button.addEventListener("click",()=>{
+    console.log("event stimulation")
+})
+button.click()
