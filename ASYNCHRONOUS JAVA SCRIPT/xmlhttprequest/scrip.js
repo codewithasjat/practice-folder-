@@ -1,21 +1,14 @@
-const image = document.querySelector("img")
-const button = document.querySelector(".button")
+const button = document.querySelector(".button");
+const img = document.querySelector("img");
 
+button.addEventListener("click", () => {
+  const xml = new XMLHttpRequest();
+  xml.responseType = "json";
 
-button.addEventListener("click",()=>{
-    const xhr = new XMLHttpRequest()
-    xhr.responseType = "json"
-    xhr.addEventListener( "load",()=>{
-       
-        image.src = xhr.response.message
-     console.log(image.src)
-         
-    })
+  xml.addEventListener("load", () => {
+    img.src = xml.response.message;
+  });
+  xml.open("GET", "https://dog.ceo/api/breeds/image/random");
 
-   xhr.open("GET", "https://dog.ceo/api/breeds/image/random");
-   
-    xhr.send ()
-   console.log(image.src)
-
-})
-
+  xml.send();
+});
