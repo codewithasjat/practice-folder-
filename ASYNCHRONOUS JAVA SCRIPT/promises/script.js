@@ -1,66 +1,50 @@
-// // promise nothing but object
+// const resolvebtn = document.querySelector(".first")
+// const rejectbtn = document.querySelector(".second")
+// const xhr = document.querySelector(".xhr")
 
-const resolveButton = document.querySelector(".first");
-const rejectButton = document.querySelector(".second");
-const button = document.querySelector(".xhr");
 
-const p = new Promise((resolve, reject) => {
-  resolveButton.addEventListener("click", () => {
-    resolve("promise resolved");
-  });
+// const p = new Promise((resolve ,reject)=>{
+//  resolvebtn.addEventListener("click",()=>{
+//    resolve("promise resloved")
+//  })
 
-  rejectButton.addEventListener("click", () => {
-    reject("promise reject");
-  });
+//  rejectbtn.addEventListener("click",()=>{
+//   reject("promise reject")
+//  })
+// })
 
-});
-
-p.then((data)=>{
-console.log(data);
-}).catch ((err)=>{
-  console.log(err);
-})
-
-// console.log(Promise);
-// console.log(new Promise ((resolve , reject)=>{
-//   reject ("rejected")
-// }));
+// p.then((data)=>{
+// console.log(data)
+// }).catch((err)=>{
+// console.log(err)
+// })
 
 
 
-// lets fix the call back hell using promises
-
- function makeHttpRequest (method , url){
-  const xhr = new XMLHttpRequest
-  xhr.responseType = "json"
- 
-  const p = new Promise ((resolve , reject)=>{
-    
-    xhr.addEventListener ("load",(data)=>{
-       resolve("promise resolve")
-    })
-    xhr.addEventListener ("error",(error)=>{
-       reject("promise rejected")
-    })
-  
-  })
-
-  xhr.open (method, url)
-  xhr.send()
-    
-  return p
- }
-const url = "https://jsonplaceholder.typicode.com/todos/1";
-
- makeHttpRequest ("GET", url)
-
- .then((data)=>{
-  console.log(data);
- }).catch((error)=>{
-  console.log(error);
+function promise1(method , url){
+  let xhr = new XMLHttpRequest()
+ const p = new Promise((resolve,reject)=>{
+   xhr.addEventListener("load",(data)=>{
+      resolve(data)
+   })
+   xhr.addEventListener("error",(error)=>{
+      reject(error)
+   })
  })
+xhr.open(method,url)
+xhr.send()
+return p
+}
 
+const url = "https://dummyjson.com/users/1";
 
+promise1("GET",url)
+
+.then((data)=>{
+console.log(data)
+}).catch((error)=>{
+console.log(error)
+})
 
  
 

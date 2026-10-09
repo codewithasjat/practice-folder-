@@ -1,16 +1,38 @@
 
-function callBack (method,url,callback){
-  const xml = new XMLHttpRequest()
-  xml.responseType ="json"
-  xml.addEventListener("load",()=>{
-    callback(xml.response)
-  })
+function callBack(method, url, callback) {
+  const xhr = new XMLHttpRequest();
 
-  xml.open(method,url)
-   xml.send()
+  xhr.responseType = "json";
+
+  xhr.addEventListener("load", () => {
+    callback(xhr.response);
+  });
+
+  xhr.open(method, url);
+  xhr.send();
 }
 
-callBack("GET","https://dummyjson.com/users/1",(data)=>{console.log(data);callBack("GET","https://dummyjson.com/users/1",(data)=>{console.log(data.id);callBack("GET","https://dummyjson.com/users/1",(data)=>{console.log(data.age)} )} )} )
+callBack(
+  "GET",
+  "https://jsonplaceholder.typicode.com/users/1",
+  (user) => {
+    console.log("USER:", user);
 
-// console.log(XMLHttpRequest);   //its constructer function blue print
-// console.log( new XMLHttpRequest); // her object is creating on that blue print
+    callBack(
+      "GET",
+      `https://jsonplaceholder.typicode.com/posts?userId=${user.id}`,
+      (posts) => {
+        console.log("POSTS:", posts);
+
+        callBack(
+          "GET",
+          `https://jsonplaceholder.typicode.com/comments?postId=${posts[0].id}`,
+          (comments) => {
+            console.log("COMMENTS:", comments);
+          }
+        );
+      }
+    );
+  }
+);
+
