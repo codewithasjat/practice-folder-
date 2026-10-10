@@ -1,38 +1,65 @@
+// // function callBack(method, url, callback) {
+// //   const xhr = new XMLHttpRequest();
 
-function callBack(method, url, callback) {
-  const xhr = new XMLHttpRequest();
+// //   xhr.responseType = "json";
 
-  xhr.responseType = "json";
+// //   xhr.addEventListener("load", () => {
+// //     callback(xhr.response);
+// //   });
 
-  xhr.addEventListener("load", () => {
-    callback(xhr.response);
-  });
+// //   xhr.open(method, url);
+// //   xhr.send();
+// // }
 
-  xhr.open(method, url);
-  xhr.send();
+// // callBack(
+// //   "GET",
+// //   "https://jsonplaceholder.typicode.com/users/1",
+// //   (user) => {
+// //     console.log("USER:", user);
+
+// //     callBack(
+// //       "GET",
+// //       `https://jsonplaceholder.typicode.com/posts?userId=${user.id}`,
+// //       (posts) => {
+// //         console.log("POSTS:", posts);
+
+// //         callBack(
+// //           "GET",
+// //           `https://jsonplaceholder.typicode.com/comments?postId=${posts[0].id}`,
+// //           (comments) => {
+// //             console.log("COMMENTS:", comments);
+// //           }
+// //         );
+// //       }
+// //     );
+// //   }
+// // );
+
+function makeTea(callBack) {
+  console.log("chai ban rahi hai...");
+  callBack();
 }
 
-callBack(
-  "GET",
-  "https://jsonplaceholder.typicode.com/users/1",
-  (user) => {
-    console.log("USER:", user);
+function getbiscuit(callBack) {
+  console.log("Biscut le aaye!");
+  callBack();
+}
+function serve(callBack) {
+  console.log("Chai aur biscuit serve kar diya");
+  callBack();
+}
 
-    callBack(
-      "GET",
-      `https://jsonplaceholder.typicode.com/posts?userId=${user.id}`,
-      (posts) => {
-        console.log("POSTS:", posts);
+function over() {
+  console.log("sab kaam complete");
+}
 
-        callBack(
-          "GET",
-          `https://jsonplaceholder.typicode.com/comments?postId=${posts[0].id}`,
-          (comments) => {
-            console.log("COMMENTS:", comments);
-          }
-        );
-      }
-    );
-  }
-);
+makeTea(() => {
+  getbiscuit(() => {
+    serve(() => {
+      over();
+    });
+  });
+});
+
+
 

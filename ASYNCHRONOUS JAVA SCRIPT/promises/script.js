@@ -1,6 +1,6 @@
-// const resolvebtn = document.querySelector(".first")
-// const rejectbtn = document.querySelector(".second")
-// const xhr = document.querySelector(".xhr")
+const resolvebtn = document.querySelector(".first")
+const rejectbtn = document.querySelector(".second")
+const xhr = document.querySelector(".xhr")
 
 
 // const p = new Promise((resolve ,reject)=>{
@@ -15,20 +15,27 @@
 
 // p.then((data)=>{
 // console.log(data)
+// return "misba"
+// }).then((data)=>{
+//   console.log(data)
 // }).catch((err)=>{
 // console.log(err)
 // })
 
 
 
-function promise1(method , url){
-  let xhr = new XMLHttpRequest()
+// solving call back hell using promises
+
+
+function MakeHttpRequest(method , url){
+  const xhr = new XMLHttpRequest()
+  xhr.responseType = "json"
  const p = new Promise((resolve,reject)=>{
-   xhr.addEventListener("load",(data)=>{
-      resolve(data)
+   xhr.addEventListener("load",()=>{
+      resolve(xhr.response)
    })
-   xhr.addEventListener("error",(error)=>{
-      reject(error)
+   xhr.addEventListener("error",()=>{
+      reject(xhr.response)
    })
  })
 xhr.open(method,url)
@@ -36,16 +43,26 @@ xhr.send()
 return p
 }
 
-const url = "https://dummyjson.com/users/1";
+const url = "https://jsonplaceholder.typicode.com/users/1"
 
-promise1("GET",url)
+MakeHttpRequest("GET",url)
 
-.then((data)=>{
+
+// .then((data)=>{
+// console.log(data)
+// }).catch((error)=>{
+// console.log(error)
+// })
+
+.then ((data)=>{
 console.log(data)
-}).catch((error)=>{
-console.log(error)
+return data
+}).then((data)=>{
+console.log(data.id)
+return data
+}).then((data)=>{
+console.log(data.name)
 })
-
  
 
 
