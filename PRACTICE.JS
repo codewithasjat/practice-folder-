@@ -35,3 +35,9 @@ console.log(date.getHours());
 console.log(date.getMinutes());
 console.log(date.getSeconds());
 console.log(date.getMilliseconds());
+console.log(Number.isInteger(25));   // true
+console.log(Number.isInteger(25.5)); // false
+
+console.log(Number.isNaN(NaN));      // true
+console.log(Number.isFinite(100));   // true
+console.log(Number.isFinite(Infinity)); // false
