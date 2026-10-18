@@ -1,13 +1,13 @@
-// const user = {
-//   FirstNmae: "anurag",
-//   LastNmae: "bagwan",
-//   age: 23,
-//   getAgeyear: function () {
-//     return new Date().getFullYear() - user.age;
-//   },
-// };
+const user = {
+  FirstNmae: "anurag",
+  LastNmae: "bagwan",
+  age: 23,
+  getAgeyear: function () {
+    return new Date().getFullYear() - user.age;
+  },
+};
 
-// console.log(user.getAgeyear());
+console.log(user.getAgeyear());
 
 function creatUser(FirstNmae, LastNmae, age) {
   const user = {

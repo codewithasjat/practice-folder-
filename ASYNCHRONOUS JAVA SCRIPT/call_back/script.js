@@ -53,13 +53,9 @@ function over() {
   console.log("sab kaam complete");
 }
 
-makeTea(() => {
-  getbiscuit(() => {
-    serve(() => {
-      over();
-    });
-  });
-});
+makeTea(()=>{
+  getbiscuitbis()
+})
 
 
 

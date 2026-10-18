@@ -8,10 +8,10 @@
 
 // }
 
-// without gettter ans setter
+// // without gettter ans setter
 // console.log(user.firstName+" "+user.lastName);
 // console.log(user.fullName())
-// user.fullName = "asjat bagwan"
+
 
 const user2 = {
     firstName:"asjat",
@@ -27,7 +27,10 @@ const user2 = {
     }
 
 
-}
+
 
  console.log(user2.fullName)
+ console.log(user2);
 user2.fullName ="misba bagwan"
+console.log(user2);
+

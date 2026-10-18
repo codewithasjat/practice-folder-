@@ -20,10 +20,6 @@
 
 // new keyword
 
-// function sayHi(){
-//     console.log("asjat bagwan")
-
-// }
 
 //secod part
 function creatUser(firstName, LastName, age) {
@@ -32,9 +28,13 @@ function creatUser(firstName, LastName, age) {
   this.age = age;
 }
 
-creatUser.prototype.getuserage = function(){
-   return  new Date().getFullYear()-this.age
+// creatUser.prototype.getuserage = function(){
+//    return  new Date().getFullYear()-this.age
+// }
+
+creatUser.prototype.getName = function(){
+  return `${this.firstName} loves misba `
 }
 const user1 = new creatUser("asjat","bagwan ",23)
-console.log(user1.getuserage())
+// console.log(user1.getuserage())
 const user2 = new creatUser("misba","bagwan ",63)
