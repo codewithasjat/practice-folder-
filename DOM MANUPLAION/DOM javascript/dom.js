@@ -27,5 +27,7 @@ let attribute =h1.getAttribute("class")
 console.log(attribute)
 h1.setAttribute("id","misba")
 
+console.log("asjat");
+
 
 
