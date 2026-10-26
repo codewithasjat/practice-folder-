@@ -26,7 +26,8 @@ const user2 = {
      this.lastName = splitted[1]
     }
 
-
+   }
+   
 
 
  console.log(user2.fullName)

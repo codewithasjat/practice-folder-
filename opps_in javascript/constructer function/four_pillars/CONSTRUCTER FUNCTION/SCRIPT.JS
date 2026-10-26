@@ -1,22 +1,22 @@
-//    function getage(){
-//             return new Date().getFullYear()-this.age
-//         };
+   function getage(){
+            return new Date().getFullYear()-this.age
+        };
 
-// function getUserage(firstName , LastName , age){
-//     const user = {
-//         firstName,
-//         LastName,
-//         age,
-//        getage
+function getUserage(firstName , LastName , age){
+    const user = {
+        firstName,
+        LastName,
+        age,
+       getage
 
-//     }
-//   return user
-// }
+    }
+  return user
+}
 
-// const result1 = getUserage("asjat","bagwan",76)
-// console.log(result1.getage())
-// const result2 = getUserage("anurag","mishra",86)
-// console.log(result2.getage())
+const result1 = getUserage("asjat","bagwan",76)
+console.log(result1.getage())
+const result2 = getUserage("anurag","mishra",86)
+console.log(result2.getage())
 
 // new keyword
 
@@ -36,5 +36,5 @@ creatUser.prototype.getName = function(){
   return `${this.firstName} loves misba `
 }
 const user1 = new creatUser("asjat","bagwan ",23)
-// console.log(user1.getuserage())
+console.log(user1.getName())
 const user2 = new creatUser("misba","bagwan ",63)

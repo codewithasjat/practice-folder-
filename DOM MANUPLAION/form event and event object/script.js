@@ -8,42 +8,42 @@ const form = document.querySelector("form")
 //     console.log("input clicked2")
 //     console.log(e.target.value)
 // })
-// Userinput.addEventListener("input",(e)=>{
-//     console.log("input clicked2")
-//     console.log(e.target.value)
+Userinput.addEventListener("input",(e)=>{
+    console.log("input clicked2")
+    console.log(e.target.value)
     
 
-//      p.innerText = e.target.value
-// })
-// Userinput.addEventListener("change",(e)=>{
-//     console.log("input clicked2")
-//     console.log(e.target.value)
+     p.innerText = e.target.value
+})
+Userinput.addEventListener("change",(e)=>{
+    console.log("input clicked2")
+    console.log(e.target.value)
     
 
-//      p.innerText = e.target.value
-// })
-// Userinput.addEventListener("focus",(e)=>{
-//     console.log("input clicked2")
-//     console.log(e.target.value)
-//     console.log(e)
+     p.innerText = e.target.value
+})
+Userinput.addEventListener("focus",(e)=>{
+    console.log("input clicked2")
+    console.log(e.target.value)
+    console.log(e)
     
 
-//      p.innerText = e.target.value
-// })
+     p.innerText = e.target.value
+})
 
-// form.addEventListener("submit",(e)=>{
+form.addEventListener("submit",(e)=>{
 
-//        e.preventDefault()
-//       p.innerText =e.target.email.value
-//       p.innerText= e.target.password.value
+       e.preventDefault()
+      p.innerText =e.target.email.value
+      p.innerText= e.target.password.value
 
-// })
+})
 
 
-// window.addEventListener("keypress",(e)=>{
-//     console.log(e)
-//     console.log(e.key)
-//     console.log(e.keyName)
-// })
+window.addEventListener("keypress",(e)=>{
+    console.log(e)
+    console.log(e.key)
+    console.log(e.keyName)
+})
 
 
