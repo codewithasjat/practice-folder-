@@ -56,16 +56,35 @@
 
 //13
 // currying
-function add(a){
+// function add(a){
 
-    return function(b){
+//     return function(b){
     
-        return function(c){
-            return a+b+c
-        }
-    }
+//         return function(c){
+//             return a+b+c
+//         }
+//     }
 
-}
+// }
 
-console.log(add(4)(2)(3));
+// console.log(add(4)(2)(3));
+
+//infinite currying 
+// function add(a){
+//     return function(b){
+//         if(b){
+//             return add( a+b)
+//         }
+//         return a
+//     }
+// }
+
+// console.log(add(2)(3)(4)());
+
+document.addEventListener("keydown", function (event) {
+  console.log(event.key);
+  console.log(event.code);
+  console.log(event.shiftKey);
+  console.log(event.ctrlKey);
+});
 
